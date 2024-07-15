@@ -4,30 +4,58 @@
     <meta charset="UTF-8">
     <title>联系我</title>
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            line-height: 1.6;
+        @keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+.typing {
+  overflow: hidden;
+  white-space: nowrap;
+  width: 0;
+  animation: typing 5s steps(30, end);
+  animation-fill-mode: forwards;
+}
+
+/* 重置浏览器默认样式 */
+body, h1, p {
             margin: 0;
             padding: 0;
         }
 
+        /* 设置字体和行高 */
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+        }
+
+        /* 头部样式 */
         header {
             background-color: #f1f1f1;
             padding: 20px;
             text-align: center;
+            font-size: 24px;
+            color: #333;
         }
 
+        /* 导航栏样式 */
         nav {
             display: flex;
-            justify-content: space-around;
+            justify-content: center;
             background-color: #333;
             padding: 10px;
+            transition: background-color 0.3s ease;
         }
 
         nav a {
             color: white;
             text-decoration: none;
             padding: 8px 16px;
+            transition: color 0.3s ease;
         }
 
         nav a:hover {
@@ -35,6 +63,7 @@
             color: black;
         }
 
+        /* 主要内容样式 */
         main {
             display: flex;
             flex-wrap: wrap;
@@ -42,19 +71,63 @@
             padding: 20px;
         }
 
+        /* 卡片样式 */
         .card {
             background-color: white;
             box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-            margin: 16px;
+            margin: 16px auto;
             padding: 16px;
             text-align: center;
             width: 300px;
+            border-radius: 15px;
+            position: relative;
         }
 
+        .card::before {
+            content: "";
+            position: absolute;
+            top: -10px;
+            left: 50%;
+            margin-left: -10px;
+            width: 0;
+            height: 0;
+            border-left: 10px solid transparent;
+            border-right: 10px solid transparent;
+            border-top: 10px solid #333;
+        }
+
+        /* 底部样式 */
         footer {
             background-color: #f1f1f1;
             padding: 20px;
             text-align: center;
+            font-size: 12px;
+            color: #333;
+        }
+
+        /* 添加一些颜色和动画效果 */
+        body {
+            background-color: blue;
+        }
+
+        header {
+            background-color: #333;
+            color: white;
+        }
+
+        nav {
+            background-color: #4CAF50;
+        }
+
+        .card {
+            background-color: #f9f9f9;
+            box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+        }
+
+        /* 动画效果 */
+        .card:hover {
+            transform: scale(1.1);
+            transition: transform 0.3s ease;
         }
     </style>
 </head>
@@ -64,24 +137,4 @@
     </header>
     <nav>
         <a href="index.html">首页</a>
-        <a href="about.html">关于我</a>
-        <a href="project.html">项目</a>
-        <a href="contact.html">联系我</a>
-    </nav>
-    <main>
-        <div class="card">
-            <h2>联系我</h2>
-            <p>你可以在这里添加你的联系方式，例如：</p>
-            <p>邮箱：1986457904@qq.com</p>
-            <p>qq：1986457904</p> 
-            <p>微信：不愿透露</p>
-            <p>手机：不愿透露</p>
-            <p>你还可以添加一个在线联系表单，以便让其他人能够更容易地联系到你。</p>
-        </div>
-    </main>
-
-    <footer>
-        &copy; 2024 我的个人网站. All rights reserved.
-    </footer>
-</body>
-</html>
+      
