@@ -35,10 +35,18 @@
       flex-direction: column;
       min-height: 100vh; /* 最小高度为视口高度，确保footer在页面底部 */
       margin: 0;
-      background: linear-gradient(125deg, #2c3e25, #27ae60, #2980b9, #e74c3c, #8e44ad);
+      background: linear-gradient(125deg, #86ea9b, #ff9db4, #ea86d5, #e74c3c, #e93f3f);
       color: #000000;
-    }
+      background-size: 400%;
+      animation: bgmove 10s infinite;
 
+    }
+    /* 渐变动画*/
+@keyframes bgmove {
+  0% {background-position: 0% 50%;}
+  50%{background-position: 100% 50%;}
+  100%{background-position: 0% 50%;}
+}
     /* 头部样式 */
     header {
       background-color: #333;

@@ -1,28 +1,28 @@
 <!DOCTYPE html>
 <html>
-<head>    /* 不要偷我网站！！！！ */
+<head>
     <meta charset="UTF-8">
     <title>关于我</title>
     <style>
 /* 重置浏览器默认样式 */
 @keyframes typing {
-  from {    /* 不要偷我网站！！！！ */
-    width: 0;    /* 不要偷我网站！！！！ */
+  from {
+    width: 0;
   }
   to {
     width: 100%;
   }
-}    /* 不要偷我网站！！！！ */
-    /* 不要偷我网站！！！！ */
+}
+
 .typing {
   overflow: hidden;
-  white-space: nowrap;    /* 不要偷我网站！！！！ */
+  white-space: nowrap;
   width: 0;
   animation: typing 5s steps(30, end);
   animation-fill-mode: forwards;
 }
     /* 重置浏览器默认样式 */
-    body, h1, p {    /* 不要偷我网站！！！！ */    /* 不要偷我网站！！！！ */
+    body, h1, p {
       margin: 0;
       padding: 0;
     }
@@ -35,15 +35,24 @@
       flex-direction: column;
       min-height: 100vh; /* 最小高度为视口高度，确保footer在页面底部 */
       margin: 0;
-      background: linear-gradient(125deg, #2c3e25, #27ae60, #2980b9, #e74c3c, #8e44ad);
+      background: linear-gradient(125deg, #86ea9b, #ff9db4, #ea86d5, #e74c3c, #e93f3f);
       color: #000000;
-    }
+      background-size: 400%;
+      animation: bgmove 10s infinite;
 
-    /* 头部样式 */    /* 不要偷我网站！！！！ */
+    }
+    /* 渐变动画*/
+@keyframes bgmove {
+  0% {background-position: 0% 50%;}
+  50%{background-position: 100% 50%;}
+  100%{background-position: 0% 50%;}
+}
+
+    /* 头部样式 */
     header {
       background-color: #333;
       padding: 20px;
-      text-align: center;    /* 不要偷我网站！！！！ */
+      text-align: center;
       font-size: 24px;
       color: white;
     }
@@ -68,7 +77,7 @@
       color: black;
     }
 
-    /* 主要内容样式 */    /* 不要偷我网站！！！！ */
+    /* 主要内容样式 */
     main {
       flex: 1; /* 主要内容区域占据剩余空间 */
       display: flex;
@@ -87,12 +96,12 @@
     margin: 16px;
     text-align: center;
     border-radius: 8px;
-    transition: transform 0.3s ease;    /* 不要偷我网站！！！！ */
+    transition: transform 0.3s ease;
 }
 
 .card:hover {
   transform: scale(1.05);
-}    /* 不要偷我网站！！！！ */
+}
 
     /* 底部样式 */
     footer {
@@ -100,12 +109,12 @@
       padding: 20px;
       text-align: center;
       font-size: 12px;
-      color: #333;    /* 不要偷我网站！！！！ */
+      color: #333;
     }
     </style>
 </head>
 <body>
-    <header>    /* 不要偷我网站！！！！ */
+    <header>
         <h1>一个奇葩的人的个人网站</h1>
     </header>
     <nav>
@@ -116,7 +125,6 @@
         <a href="history.html">历史</a>
     </nav>
     <main>
-          /* 不要偷我网站！！！！ */
         <div class="card">
             <h2>关于我</h2>
             <p>我是一名初中生，懂的数码产品。</p>
