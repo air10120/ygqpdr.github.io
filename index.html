@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <title>个人网站</title>
     <style>
-        @keyframes typing {
+/* 重置浏览器默认样式 */
+@keyframes typing {
   from {
     width: 0;
   }
@@ -20,127 +21,109 @@
   animation: typing 5s steps(30, end);
   animation-fill-mode: forwards;
 }
-
-/* 重置浏览器默认样式 */
-body, h1, p {
-            margin: 0;
-            padding: 0;
-        }
-
-        /* 设置字体和行高 */
-        body {
-            font-family: 'Arial', sans-serif;
-            line-height: 1.6;
-        }
-
-        /* 头部样式 */
-        header {
-            background-color: #f1f1f1;
-            padding: 20px;
-            text-align: center;
-            font-size: 24px;
-            color: #333;
-        }
-
-        /* 导航栏样式 */
-        nav {
-            display: flex;
-            justify-content: center;
-            background-color: #333;
-            padding: 10px;
-            transition: background-color 0.3s ease;
-        }
-
-        nav a {
-            color: white;
-            text-decoration: none;
-            padding: 8px 16px;
-            transition: color 0.3s ease;
-        }
-
-        nav a:hover {
-            background-color: #ddd;
-            color: black;
-        }
-
-        /* 主要内容样式 */
-        main {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            padding: 20px;
-        }
-
-        /* 卡片样式 */
-        .card {
-            background-color: white;
-            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-            margin: 16px auto;
-            padding: 16px;
-            text-align: center;
-            width: 300px;
-            border-radius: 15px;
-        }
-
-        /* 底部样式 */
-        footer {
-            background-color: #f1f1f1;
-            padding: 20px;
-            text-align: center;
-            font-size: 12px;
-            color: #333;
-        }
-
-        /* 添加一些颜色和动画效果 */
-        body {
-            body {
-    background-color: blue;
-}
-
-}
-        header {
-            background-color: #333;
-            color: white;
-        }
+    /* 重置浏览器默认样式 */
+    body, h1, p {
+      margin: 0;
+      padding: 0;
+    }
     
-        nav {
-            background-color: #4CAF50;
-        }
+    /* 设置全局字体和行高 */
+    body {
+      font-family: "Arial", sans-serif;
+      line-height: 1.6;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh; /* 最小高度为视口高度，确保footer在页面底部 */
+      margin: 0;
+      background: linear-gradient(125deg, #2c3e25, #27ae60, #2980b9, #e74c3c, #8e44ad);
+      color: #000000;
+    }
 
-        .card {
-            background-color: #f9f9f9;
-            box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
-        }
+    /* 头部样式 */
+    header {
+      background-color: #333;
+      padding: 20px;
+      text-align: center;
+      font-size: 24px;
+      color: white;
+    }
 
-        /* 动画效果 */
-        .card:hover {
-            transform: scale(1.1);
-            transition: transform 0.3s ease;
-        }
-</style>
+    /* 导航栏样式 */
+    nav {
+      background-color: #4caf50;
+      text-align: center;
+      padding: 10px;
+      transition: background-color 0.3s ease;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      padding: 8px 16px;
+      transition: color 0.3s ease;
+    }
+
+    nav a:hover {
+      background-color: #ddd;
+      color: black;
+    }
+
+    /* 主要内容样式 */
+    main {
+      flex: 1; /* 主要内容区域占据剩余空间 */
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      padding: 20px;
+    }
+
+    /* 卡片样式 */
+    .card{
+    width: 250px; /* 设置相同的固定宽度 */
+    background-color: #f0f0f0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 16px;
+    margin: 16px;
+    text-align: center;
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+}
+
+.card:hover {
+  transform: scale(1.05);
+}
+
+    /* 底部样式 */
+    footer {
+      background-color: #f1f1f1;
+      padding: 20px;
+      text-align: center;
+      font-size: 12px;
+      color: #333;
+    }
+    </style>
 </head>
 <body>
     <header>
         <h1>一个奇葩的人的个人网站</h1>
     </header>
     <nav>
-        
-            <a href="index.html">首页</a>
-            <a href="about.html">关于我</a>
-            <a href="project.html">项目</a>
-            <a href="contact.html">联系我</a>
-            <a href="history.html">历史</a>
-        
+        <a href="index.html">首页</a>
+        <a href="about.html">关于我</a>
+        <a href="project.html">项目</a>
+        <a href="contact.html">联系我</a>
+        <a href="history.html">历史</a>
     </nav>
-
-    <div class="card">
-        <h2>欢迎来到我的个人网站</h2>
-        <p class="typing">这里是我的个人网站，欢迎访问！</p>
-        <p>这我是由我一人开的的个人网站，托管于github</p>
-    </div>
-</main>
-<footer>
-    &copy; 2024 一个奇葩的人个人网站. All rights reserved.
-</footer>
-</body>
-</html>
+    <main>
+        <div class="card">
+            <h2>欢迎来到我的个人网站</h2>
+            <p class="typing">这里是我的个人网站，欢迎访问！</p>
+            <p>这我是由我一人开的的个人网站，托管于github</p>
+    </main>
+    <footer>
+        &copy; 2024 一个奇葩的人个人网站. All rights reserved.
+    
+    <footer>
+        </body>
+    </html>
